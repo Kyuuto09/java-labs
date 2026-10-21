@@ -1,4 +1,4 @@
-package labs.OOP;
+package labs.OOP.Person;
 
 public class Person {
     private String name;

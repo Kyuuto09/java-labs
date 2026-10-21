@@ -1,4 +1,4 @@
-package labs.OOP;
+package labs.OOP.Rectangle;
 
 public class Rectangle {
     private int length;

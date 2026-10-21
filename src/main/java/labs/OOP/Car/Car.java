@@ -1,4 +1,4 @@
-package labs.OOP;
+package labs.OOP.Car;
 
 enum EngineStatus {
     ACTIVATED,

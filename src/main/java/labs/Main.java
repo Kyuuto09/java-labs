@@ -1,60 +1,28 @@
 package labs;
 
-import labs.OOP.Animal.Cat;
-import labs.OOP.Animal.Dog;
-import labs.OOP.Calculator;
-import labs.OOP.Car;
-import labs.OOP.Person;
-import labs.OOP.Rectangle;
+import labs.OOP.Animal.AnimalService;
+import labs.OOP.Calculator.CalculatorService;
+import labs.OOP.Car.CarService;
+import labs.OOP.Person.PersonService;
+import labs.OOP.Rectangle.RectangleService;
 
 public class Main {
-    static void myCar() {
-        Car myCar = new Car("Audi", "Q8", 2026);
-
-        myCar.getCarInfo();
-        myCar.start();
-        myCar.getCarInfo();
-        myCar.stop();
-    }
-
-    static void myCalc()
-    {
-        Calculator myCalculator = new Calculator();
-
-        myCalculator.add(5, 5);
-        myCalculator.add(5.5, 5.5);
-    }
-
-    static void personClass() {
-        Person john = new Person("John", 20);
-
-        john.getPersonInfo();
-    }
-
-    static void myRectangle() {
-        Rectangle myRectangle = new Rectangle(5, 5);
-
-        myRectangle.calculateArea();
-        myRectangle.calculatePerimeter();
-    }
-
-    static void myAnimal() {
-        Dog myDog = new Dog("Dog", "Tommy");
-        Cat myCat = new Cat("Cat", "Lilly");
-
-        myDog.sound();
-        myCat.sound();
-    }
 
     static void main(String[] args) {
-        myCar();
+        CarService carService = new CarService();
+        CalculatorService myCalculator = new CalculatorService();
+        PersonService person = new PersonService();
+        RectangleService myRectangle = new RectangleService();
+        AnimalService myAnimal = new AnimalService();
+
+        carService.myCarFunc();
         IO.println("---------");
-        myCalc();
+        myCalculator.myCalcFunc();
         IO.println("---------");
-        personClass();
+        person.personFunc();
         IO.println("---------");
-        myRectangle();
+        myRectangle.myRectangleFunc();
         IO.println("---------");
-        myAnimal();
+        myAnimal.myAnimalFunc();
     }
 }
